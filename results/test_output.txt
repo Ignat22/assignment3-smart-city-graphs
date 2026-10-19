@@ -1,0 +1,73 @@
+[PASS] DSU starts with n sets
+[PASS] union of different sets returns true
+[PASS] union of same set returns false
+[PASS] 0 and 2 connected after unions
+[PASS] 4 and 5 still separate
+[PASS] set count after 3 successful unions
+[PASS] all DSU variants give the same partition
+[PASS] naive union builds a chain of height n-1
+[PASS] union by rank height <= log2(n)
+[PASS] path compression flattens the path of a found element
+[PASS] Kruskal weight on known graph = 16
+[PASS] Prim weight on known graph = 16
+[PASS] MST has V-1 edges
+[PASS] known graph is connected
+[PASS] single vertex MST has weight 0
+[PASS] single vertex MST has no edges
+[PASS] single vertex graph is connected
+[PASS] empty graph MST weight 0
+[PASS] Kruskal detects disconnected graph
+[PASS] Prim detects disconnected graph
+[PASS] disconnected graph has 3 components
+[PASS] spanning forest weight = 7
+[PASS] spanning forest has V - components edges
+[PASS] BFS agrees the graph is disconnected
+[PASS] square with equal sides has MST weight 3
+[PASS] both trees avoid the heavy diagonal
+[PASS] both results are spanning trees
+[PASS] all weights equal: MST weight = 10*(V-1)
+[PASS] duplicate weights still give spanning trees
+[PASS] Kruskal and Prim match brute-force MST on 40 small graphs
+[PASS] Kruskal and Prim weights equal on 20 random connected graphs
+[PASS] random MST is a spanning tree (Kruskal)
+[PASS] random MST is a spanning tree (Prim)
+[PASS] small DAG recognised
+[PASS] small DAG order is valid
+[PASS] single vertex is a DAG with order [0]
+[PASS] cycle 1->2->3->1 detected
+[PASS] order is null for cyclic graph
+[PASS] cycle vertices reported as blocked
+[PASS] self loop detected as cycle
+[PASS] topological order valid for 15 random DAGs
+[PASS] cycle detection agrees with SCC on 15 random directed graphs
+[PASS] DAG with one back edge is detected as cyclic after ordering at least half the vertices
+[PASS] known graph has 3 SCCs
+[PASS] 0,1,2 in same SCC
+[PASS] 3,4,5 in same SCC
+[PASS] 6,7 in same SCC
+[PASS] 0 and 3 in different SCCs
+[PASS] single vertex forms one SCC
+[PASS] every SCC of a DAG is a single vertex
+[PASS] every vertex belongs to exactly one SCC
+[PASS] SCCs match mutual reachability on 30 random graphs
+[PASS] condensation graph is always a DAG
+[PASS] dist to 1 = 7 via 2
+[PASS] dist to 3 = 9
+[PASS] dist to 4 = 5
+[PASS] path to 3 is 0-2-1-3
+[PASS] single vertex distance 0 and path [0]
+[PASS] vertex 1 reachable
+[PASS] vertices 2 and 3 unreachable
+[PASS] unreachable path is empty
+[PASS] unreachable distance is infinity
+[PASS] reachable count = 2
+[PASS] equal-cost paths give distance 2
+[PASS] chosen path is one of the shortest
+[PASS] path weights equal reported distances
+[PASS] Dijkstra matches Bellman-Ford on 30 random graphs
+[PASS] Dijkstra rejects negative weights
+[PASS] counter-example: Dijkstra gives 3 but correct answer is 2
+[PASS] same seed gives the same graph
+[PASS] generated undirected graphs are connected, simple and have exact V/E
+
+Passed: 71, failed: 0
