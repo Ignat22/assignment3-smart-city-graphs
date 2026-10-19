@@ -1,0 +1,4 @@
+graph,V,E,avg_ms,pq_comparisons,edge_examinations,relaxations,pq_ops,stale_entries,total_ops,reachable
+Small,10,30,0.001145,79,60,17,36,8,175,10
+Medium,100,500,0.019958,2438,1000,202,406,103,3844,100
+Large,1000,5000,0.398312,35543,10000,1932,3866,933,49409,1000

@@ -1,0 +1,60 @@
+=== Smart City Infrastructure and Route Planning ===
+
+--- 1. Infrastructure planning (MST, cost in million KZT) ---
+Candidate roads: 16, districts: 9
+Kruskal: MST, weight=48, edges=8
+  Old Town    - University    3
+  Central     - Old Town      4
+  University  - Tech Park     4
+  University  - Riverside     5
+  Industrial  - Harbor        6
+  Industrial  - Green Hills   7
+  Tech Park   - Industrial    8
+  Airport     - Industrial   11
+Prim: MST, weight=48, edges=8
+  Central     - Old Town      4
+  Old Town    - University    3
+  University  - Tech Park     4
+  University  - Riverside     5
+  Tech Park   - Industrial    8
+  Industrial  - Harbor        6
+  Industrial  - Green Hills   7
+  Airport     - Industrial   11
+Same total weight: true
+
+Disconnected plan: connected=false, components=2, forest weight=12
+
+--- 2. One-way roads (strongly connected components) ---
+Strongly connected components: 4
+  SCC 0: [Harbor]
+  SCC 1: [Central, University, Old Town]
+  SCC 2: [Tech Park, Riverside]
+  SCC 3: [Airport]
+Condensation graph is a DAG: true, component order: [0, 1, 2, 3]
+
+--- 3. Service dependencies (topological ordering) ---
+Is DAG: true
+Build order: [Power grid, Water supply, Fiber network, Traffic lights, Smart parking, Metro, City app]
+Order is valid: true
+After adding 'City app -> Fiber network':
+Is DAG: false (topological ordering impossible, cycle detected)
+Vertices on or after the cycle: [Fiber network, Traffic lights, Metro, Smart parking, City app]
+
+--- 4. Route planning (Dijkstra, travel distance in km) ---
+Source: Central
+  Central      dist=  0  path=[Central]
+  Old Town     dist=  4  path=[Central, Old Town]
+  University   dist=  7  path=[Central, University]
+  Tech Park    dist=  9  path=[Central, Tech Park]
+  Riverside    dist= 10  path=[Central, Old Town, Riverside]
+  Airport      dist= 21  path=[Central, Tech Park, Airport]
+  Industrial   dist= 17  path=[Central, Tech Park, Industrial]
+  Harbor       dist= 20  path=[Central, Old Town, Riverside, Harbor]
+  Green Hills  dist= 24  path=[Central, Tech Park, Industrial, Green Hills]
+  New Suburb   unreachable
+
+--- 5. Why Dijkstra fails with negative weights ---
+Checked version refuses: Dijkstra's algorithm requires non-negative edge weights
+dist(A->D) Dijkstra without check = 3, Bellman-Ford = 2
+B was settled with distance 2 before the cheaper path A->C->B (1) was found,
+so the edge B->D was never relaxed again.

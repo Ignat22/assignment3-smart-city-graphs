@@ -1,0 +1,11 @@
+java.version=17.0.20.1
+java.vm.name=OpenJDK 64-Bit Server VM
+os.name=Windows 10
+os.arch=amd64
+available.processors=8
+max.heap.mb=4044
+seed=42
+repeats=5
+warmup.runs.per.measurement=10
+min.batch.duration.ns=2000000
+max.calls.per.run=2000

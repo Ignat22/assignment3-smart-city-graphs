@@ -1,0 +1,4 @@
+graph,V,E,undirected_connected,directed_scc_count,directed_largest_scc,directed_has_cycle,dag_is_acyclic
+Small,10,30,true,1,10,true,true
+Medium,100,500,true,1,100,true,true
+Large,1000,5000,true,18,983,true,true
