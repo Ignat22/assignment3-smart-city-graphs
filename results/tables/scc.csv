@@ -1,0 +1,7 @@
+graph,V,E,input,avg_ms,edge_examinations,vertex_visits,total_ops,scc_count,largest_scc
+Small,10,30,random directed,0.002011,60,20,80,1,10
+Small,10,30,random DAG,0.002352,60,20,80,10,1
+Medium,100,500,random directed,0.029490,1000,200,1200,1,100
+Medium,100,500,random DAG,0.027119,1000,200,1200,100,1
+Large,1000,5000,random directed,0.352960,10000,2000,12000,18,983
+Large,1000,5000,random DAG,0.331243,10000,2000,12000,1000,1

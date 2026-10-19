@@ -1,0 +1,10 @@
+graph,V,E,input,avg_ms,edge_examinations,queue_ops,total_ops,ordered,is_dag
+Small,10,30,random DAG,0.000445,60,20,80,10,true
+Small,10,30,DAG + 1 back edge,0.000422,52,10,62,5,false
+Small,10,30,random directed (cyclic),0.000229,30,0,30,0,false
+Medium,100,500,random DAG,0.004146,1000,200,1200,100,true
+Medium,100,500,DAG + 1 back edge,0.003680,927,130,1057,65,false
+Medium,100,500,random directed (cyclic),0.001530,500,0,500,0,false
+Large,1000,5000,random DAG,0.076005,10000,2000,12000,1000,true
+Large,1000,5000,DAG + 1 back edge,0.074862,9948,1900,11848,950,false
+Large,1000,5000,random directed (cyclic),0.021358,5054,20,5074,10,false
